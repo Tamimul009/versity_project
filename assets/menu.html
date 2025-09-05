@@ -30,7 +30,7 @@
         </div>
         </div>
     </header>
-    <aside>
+    <aside class="aside">
         <h1>Dessert</h1>
         <div class="dessert">
             <div class="box">
@@ -115,6 +115,9 @@
         </div>
       </div>
     </footer>
+    <section>
+      <h1>Buy Now</h1>
+    </section>
 
 
     <!-- cart part -->
@@ -141,7 +144,7 @@
 
   // Show cart in <footer> section
   function displayCart() {
-    let cartDiv = document.querySelector("footer");
+    let cartDiv = document.querySelector("section");
     cartDiv.innerHTML = "<h2>Your Cart</h2>";
 
     if (cart.length === 0) {
