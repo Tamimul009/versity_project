@@ -6,7 +6,7 @@
     <title>Menu</title>
     <link rel="stylesheet" href="../style/menu.css">
 </head>
-<body>
+<body class="container">
     <header class="header">
         <h1>Bearkfast Menu</h1>
         <div class="breakfast">
@@ -39,6 +39,7 @@
                 <p>Price-50tk/piece</p>
                 <button onclick="addToCart('Borfi', 50)">Add to Cart</button>
             </div>
+            
             <div class="box">
                 <img src="desarts/pancake.jpg" alt="">
                 <h3>Pancake</h3>
@@ -46,7 +47,7 @@
                 <button onclick="addToCart('Pancake', 150)">Add to Cart</button>
             </div>
         </div>
-        <h3>Snacks</h3>
+        <h1>Snacks</h1>
         <div class="snacks">
             <div class="box">
                 <img src="snacks/panipuri.jpg" alt="">
@@ -63,10 +64,56 @@
         </div>
     </aside>
     <main class="main">
-
+      <h1>Lunch Menu</h1>
+      <div class="lunch">
+        <div class="box">
+          <img src="lunch/chicken curry.jpg" alt="">
+          <h3>Chicken Curry</h3>
+          <p>Price=120</p>
+          <button onclick="addToCart('Chicken Curry', 120)">Add to Cart</button>
+        </div>
+        <div class="box">
+          <img src="lunch/fried-rice.jpg " alt="">
+          <h3>Fried Rice</h3>
+          <p>Price=150Tk</p>
+          <button onclick="addToCart('Fried Rice', 150)">Add to Cart</button>
+        </div>
+        <div class="box">
+          <img src="lunch/pasta.jpg" alt="">
+          <h3>Pasta</h3>
+          <p>Price=200tk</p>
+          <button onclick="addToCart('Pasta', 200)">Add to Cart</button>
+        </div>
+        <div class="box">
+          <img src="lunch/potatoes-6292311.jpg" alt="">
+          <h3>Alur Dom</h3>
+          <p>Price+100tk</p>
+          <button onclick="addToCart('Alur Dom', 100)">Add to Cart</button>
+        </div>
+        <div class="box">
+          <img src="lunch/rice.jpg" alt="">
+          <h3>Plain Rice</h3>
+          <p>Price=30tk</p>
+          <button onclick="addToCart('PLain Rice', 30)">Add to Cart</button>
+        </div>
+      </div>
     </main>
     <footer class="footer">
-
+      <h1>Dinner Manu</h1>
+      <div class="dinner">
+        <div class="box">
+          <img src="dinner/motka.jpg" alt="">
+          <h3>Motka</h3>
+          <p>Price=250TK</p>
+          <button onclick="addToCart('Motka', 250)">Add to Cart</button>
+        </div>
+        <div class="box">
+          <img src="dinner/ruti-platter.jpg" alt="">
+          <h3>Ruti-platter</h3>
+          <p>Price=150TK</p>
+          <button onclick="addToCart('Ruti-platter', 150)">Add to Cart</button>
+        </div>
+      </div>
     </footer>
 
 
@@ -92,9 +139,9 @@
     displayCart();
   }
 
-  // Show cart in <main> section
+  // Show cart in <footer> section
   function displayCart() {
-    let cartDiv = document.querySelector("main");
+    let cartDiv = document.querySelector("footer");
     cartDiv.innerHTML = "<h2>Your Cart</h2>";
 
     if (cart.length === 0) {

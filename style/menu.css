@@ -1,27 +1,54 @@
         
-        
+        body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: red;
+      min-height: 100vh;
+    }
+
+
+    h1{
+        background-color: blanchedalmond;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    h3{
+        background-color: rgb(250, 235, 215, .4);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    p{
+        background-color: rgb(250, 235, 215, .4);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
         img{
             width: 300px;
             height: 400px;
         }
        .box{
-        background-color: bisque;
+        background-color:aliceblue;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: space-evenly;
-        padding: 10px;
+        padding: 5px;
         border: 2px solid black;
         border-radius: 10px;
         align-items: center;
+        margin: 10px;
        }
 
        .breakfast{
+        
         display: flex;
         justify-content: space-evenly;
        }
 
        .dessert{
+        
         display: flex;
         justify-content: space-evenly;
        }
@@ -30,11 +57,30 @@
         display: flex;
         justify-content: space-evenly;
        }
-       
+       .lunch{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+       }
+       .dinner{
+        display: flex;
+        justify-content: space-evenly;
+       }
+       .header{
+       }
+
+       button{
+        padding: 10px;
+        border-radius: 7px;
+        background-color: cadetblue;
+       }
+       button:hover{
+        background-color: rgb(210, 105, 30, .6);
+        text-transform: uppercase;
+       }
+
 /* layout section */
-
-
-
+       
 
 
 /* media quary */
