@@ -14,28 +14,52 @@
             <img src="breakfast/paratha.jpg" alt="">
             <h3>Paratha</h3>
             <p>Price=10TK</p>
-            <button onclick="addToCart('Product 1', 10)">Add to Cart</button>
+            <button onclick="addToCart('Paratha', 10)">Add to Cart</button>
         </div>
         <div class="box" id="b2">
             <img src="breakfast/vegetable.jpg" alt="">
             <h3>Vegetable</h3>
             <p>Price=20TK</p>
-            <button onclick="addToCart('Product 2', 20)">Add to Cart</button>
+            <button onclick="addToCart('Vegetable', 20)">Add to Cart</button>
         </div>
         <div class="box" id="b3">
             <img src="breakfast/ruti-platter.jpg" alt="">
             <h3>Ruti-platter</h3>
             <p>150Tk</p>
-            <button onclick="addToCart('Product 3', 150)">Add to Cart</button>
+            <button onclick="addToCart('Ruti-platter', 150)">Add to Cart</button>
         </div>
         </div>
     </header>
     <aside>
+        <h1>Dessert</h1>
         <div class="dessert">
-
+            <div class="box">
+                <img src="desarts/borfi.jpg" alt="">
+                <h3>Borfi</h3>
+                <p>Price-50tk/piece</p>
+                <button onclick="addToCart('Borfi', 50)">Add to Cart</button>
+            </div>
+            <div class="box">
+                <img src="desarts/pancake.jpg" alt="">
+                <h3>Pancake</h3>
+                <p>Price-150tk</p>
+                <button onclick="addToCart('Pancake', 150)">Add to Cart</button>
+            </div>
         </div>
+        <h3>Snacks</h3>
         <div class="snacks">
-
+            <div class="box">
+                <img src="snacks/panipuri.jpg" alt="">
+                <h3>Panipuri</h3>
+                <p>Price=50tk</p>
+                <button onclick="addToCart('Panipuri', 50)">Add to Cart</button>
+            </div>
+            <div class="box">
+                <img src="snacks/samosas.jpg" alt="">
+                <h3>Samosas</h3>
+                <p>Price=20tk</p>
+                <button onclick="addToCart('Samosas', 20)">Add to Cart</button>
+            </div>
         </div>
     </aside>
     <main class="main">
@@ -44,5 +68,56 @@
     <footer class="footer">
 
     </footer>
+
+
+    <!-- cart part -->
+    
+    <script>
+  let cart = [];
+
+  // Add item to cart
+  function addToCart(name, price) {
+    let existing = cart.find(item => item.name === name);
+    if (existing) {
+      existing.quantity += 1;
+    } else {
+      cart.push({ name, price, quantity: 1 });
+    }
+    displayCart();
+  }
+
+  // Remove item from cart
+  function removeFromCart(name) {
+    cart = cart.filter(item => item.name !== name);
+    displayCart();
+  }
+
+  // Show cart in <main> section
+  function displayCart() {
+    let cartDiv = document.querySelector("main");
+    cartDiv.innerHTML = "<h2>Your Cart</h2>";
+
+    if (cart.length === 0) {
+      cartDiv.innerHTML += "<p>Cart is empty</p>";
+      return;
+    }
+
+    let total = 0;
+    cart.forEach(item => {
+      total += item.price * item.quantity;
+      cartDiv.innerHTML += `
+        <div class="cart-item" style="display:flex; justify-content:space-between; margin:5px 0;">
+          <span>${item.name} (x${item.quantity})</span>
+          <span>${item.price * item.quantity} TK</span>
+          <button onclick="removeFromCart('${item.name}')">Remove</button>
+        </div>
+      `;
+    });
+
+    cartDiv.innerHTML += `<hr><h3>Total: ${total} TK</h3>`;
+  }
+</script>
+
+
 </body>
 </html>
