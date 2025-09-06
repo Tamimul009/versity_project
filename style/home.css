@@ -1,0 +1,96 @@
+body{
+    background: linear-gradient(135deg, #534d1d, #fef0b4 );
+    color: rgba(81, 5, 81,.7);
+}
+
+    h1{
+        font-family:cursive;
+        font-weight: 800;
+        font-size: 7vh;
+    }
+    h2{
+        font-family:cursive;
+        font-weight: 800;
+        font-size: 7vh;
+        color: rgb(104, 49, 4,.7);
+    }
+    h3{
+        font-size: 5vh;
+        font-weight: 700;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    p{
+        font-size: 4vh;
+    }
+    button{
+        padding: 20px;
+        background-color: chocolate;
+        border-radius: 7px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    button:hover{
+        font-size: large;
+        font-weight: 600;
+        text-transform: uppercase;
+        background-color: darkgrey;
+    }
+
+.h11 > img{
+    width: 50vh;
+    height: 50vh;
+    border-radius: 10px;
+}
+.h21 > img{
+    width: 60vh;
+    height: 50vh;
+    border-radius: 10px;
+}
+.h31 > img{
+    width: 50vh;
+    height: 50vh;
+    border-radius: 10px;
+}
+.h1,.h2,.h3{
+    background-color: rgb(250, 235, 215,.5);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20vh;
+    width: 155vh;
+}
+/* empty space */
+    .aside{
+        grid-area: aside;
+        
+    }
+    .box{
+    margin: 2vh;    
+    }
+    #c1{
+        text-wrap: wrap;
+        font-size: 8vh;
+        color: rgb(255, 127, 246,.7);
+    }
+
+.header{
+    grid-area: header;
+}
+.main{
+    grid-area: main;
+}
+.footer{
+    grid-area: footer;
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "aside main main"
+    "footer footer footer"
+    ;
+    gap: 2vh;
+}

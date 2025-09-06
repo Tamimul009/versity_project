@@ -4,16 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
+    <link rel="stylesheet" href="../style/home.css">
 </head>
-<body>
-    <header>
-
+<body class="container">
+    <header class="header">
+        <div class="h1">
+            <div class="h11"><img src="special/chicken-dom-polao.jpg" alt=""></div>
+        <div><h1>Special offer going on</h1>
+        <h3>Chicken-dom-polao</h3>
+        <p>Price=300Tk</p>
+        <button onclick="addToCart('Chicken-dom-polao', 300)">Add to Cart</button>
+        </div>
+        </div>
     </header>
-    <main>
-
+    <aside class="aside">
+     <div class="box">
+        <h2>Welcome to the <br>
+        <p id="c1">Cheese Craver</p></h2>
+     </div>
+    </aside>
+    <main class="main">
+        <div class="h2">
+            <div class="h21"><img src="special/Gbiryani.jpg" alt=""></div>
+        <div><h1>Special offer going on</h1>
+        <h3>Special-Biriani</h3>
+        <p>Price=250Tk</p>
+        <button onclick="addToCart('Special-Biriani', 250)">Add to Cart</button>
+        </div>
+        </div>
     </main>
-    <footer>
-        
+    <footer class="footer">
+        <div class="h3">
+            <div class="h31"><img src="special/papror-rice-thali.jpg" alt=""></div>
+        <div><h1>Special offer going on</h1>
+        <h3>Papor-rice-thali</h3>
+        <p>Price=300Tk</p>
+        <button onclick="addToCart('Papor-rice-thali', 300)">Add to Cart</button>
+        </div>
+        </div>
     </footer>
+    <section>
+         <script>
+  let cart = [];
+
+  // Add item to cart
+  function addToCart(name, price) {
+    let existing = cart.find(item => item.name === name);
+    if (existing) {
+      existing.quantity += 1;
+    } else {
+      cart.push({ name, price, quantity: 1 });
+    }
+    displayCart();
+  }
+
+  // Remove item from cart
+  function removeFromCart(name) {
+    cart = cart.filter(item => item.name !== name);
+    displayCart();
+  }
+
+  // Show cart in <footer> section
+  function displayCart() {
+    let cartDiv = document.querySelector("section");
+    cartDiv.innerHTML = "<h2>Your Cart</h2>";
+
+    if (cart.length === 0) {
+      cartDiv.innerHTML += "<p>Cart is empty</p>";
+      return;
+    }
+
+    let total = 0;
+    cart.forEach(item => {
+      total += item.price * item.quantity;
+      cartDiv.innerHTML += `
+        <div class="cart-item" style="display:flex; justify-content:space-between; margin:5px 0;">
+          <span>${item.name} (x${item.quantity})</span>
+          <span>${item.price * item.quantity} TK</span>
+          <button onclick="removeFromCart('${item.name}')">Remove</button>
+        </div>
+      `;
+    });
+
+    cartDiv.innerHTML += `<hr><h3>Total: ${total} TK</h3>`;
+  }
+</script>
+    </section>
+    
 </body>
 </html>
