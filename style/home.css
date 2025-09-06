@@ -7,6 +7,9 @@ body{
         font-family:cursive;
         font-weight: 800;
         font-size: 7vh;
+        background-color: rgb(245, 245, 245, .1);
+        padding: 10px;
+        border-radius: 5px;
     }
     h2{
         font-family:cursive;
@@ -15,6 +18,9 @@ body{
         color: rgb(104, 49, 4,.7);
     }
     h3{
+        background-color: rgb(245, 245, 245, .1);
+        padding: 10px;
+        border-radius: 5px;
         font-size: 5vh;
         font-weight: 700;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
