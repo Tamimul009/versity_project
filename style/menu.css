@@ -25,8 +25,8 @@
     }
 
         img{
-            width: 300px;
-            height: 400px;
+            width: 40vh;
+            height: 40vh;
         }
        .box{
         background-color:aliceblue;
@@ -45,17 +45,20 @@
         
         display: flex;
         justify-content: space-evenly;
+        flex-wrap: wrap;
        }
 
        .dessert{
         
         display: flex;
         justify-content: space-evenly;
+        flex-wrap: wrap;
        }
 
        .snacks{
         display: flex;
         justify-content: space-evenly;
+        flex-wrap: wrap;
        }
        .lunch{
         display: flex;
@@ -65,6 +68,7 @@
        .dinner{
         display: flex;
         justify-content: space-evenly;
+        flex-wrap: wrap;
        }
        .header{
        }
