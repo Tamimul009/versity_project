@@ -79,15 +79,31 @@
         background-color: cadetblue;
        }
        button:hover{
-        background-color: rgb(210, 105, 30, .6);
+        background-color: rgb(210, 105, 30, .5);
         text-transform: uppercase;
        }
 
 
        /* layout control */
 
-      
-
+      a{
+        text-decoration: none;
+      }
+      .nav{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;  
+        padding: 3vh;  
+      }
+h4{
+    font-size: 3vh;
+    padding: 0px 100px 0px 100px;
+}
+.btn:hover{
+    text-transform: uppercase;
+    background-color:azure;
+    color: darkmagenta;
+}
 /* media quary */
 
 
