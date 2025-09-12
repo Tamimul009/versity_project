@@ -27,6 +27,7 @@
         img{
             width: 40vh;
             height: 40vh;
+            border-radius: 10px;
         }
        .box{
         background-color:aliceblue;
@@ -104,9 +105,8 @@ h4{
     background-color:azure;
     color: darkmagenta;
 }
-/* media quary */
-
-
-    
+.gbtn{
+    display: flex;
+    gap:10px;
 }
-
+/* media quary */
