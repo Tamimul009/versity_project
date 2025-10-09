@@ -43,8 +43,9 @@
         </div>
         </div>
     </footer>
-    <section class="section">
-         <script>
+    <button id="cart-btn">🛒 Cart</button>
+<section class="sss section" id="cart-popup">
+  <script>
   let cart = [];
 
   // Add item to cart
@@ -64,13 +65,13 @@
     displayCart();
   }
 
-  // Show cart in <footer> section
+  // Display the cart items
   function displayCart() {
-    let cartDiv = document.querySelector("section");
-    cartDiv.innerHTML = "<h2>Your Cart</h2>";
+    let cartDiv = document.getElementById("cart-popup");
+    cartDiv.innerHTML = `<h2>Your Cart</h2>`;
 
     if (cart.length === 0) {
-      cartDiv.innerHTML += "<p>Cart is empty</p>";
+      cartDiv.innerHTML += `<p>Cart is empty</p>`;
       return;
     }
 
@@ -78,7 +79,7 @@
     cart.forEach(item => {
       total += item.price * item.quantity;
       cartDiv.innerHTML += `
-        <div class="cart-item" style="display:flex; justify-content:space-between; margin:5px 0;">
+        <div class="cart-item">
           <span>${item.name} (x${item.quantity})</span>
           <span>${item.price * item.quantity} TK</span>
           <button onclick="removeFromCart('${item.name}')">Remove</button>
@@ -86,12 +87,29 @@
       `;
     });
 
-    cartDiv.innerHTML += `<hr><h3>Total: ${total} TK</h3>`;
+    // Add total and Buy Now button
+    cartDiv.innerHTML += `
+      <hr>
+      <h3>Total: ${total} TK</h3>
+      <a href="checkout.html" id="buy-now-btn">Buy Now</a>
+    `;
   }
+
+  // Toggle popup visibility
+  const cartBtn = document.getElementById('cart-btn');
+  const cartPopup = document.getElementById('cart-popup');
+
+  cartBtn.addEventListener('click', () => {
+    cartPopup.classList.toggle('active');
+  });
+
+  // Optional: close popup when clicking outside
+  window.addEventListener('click', (e) => {
+    if (!cartPopup.contains(e.target) && e.target !== cartBtn) {
+      cartPopup.classList.remove('active');
+    }
+  });
 </script>
-    </section>
-    <nav class="nav">
-  <button class="btn"><a href="address.html"><h4>Buy Now</h4></a></button>
-</nav>
+</section>
 </body>
 </html>

@@ -110,3 +110,83 @@ h4{
     gap:10px;
 }
 /* media quary */
+/* Floating cart button */
+#cart-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 1001;
+  transition: 0.3s;
+}
+#cart-btn:hover {
+  background-color: #e68a00;
+  transform: scale(1.1);
+}
+
+/* Popup Cart */
+#cart-popup {
+  display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  padding: 15px;
+  z-index: 1000;
+  max-height: 70vh;
+  overflow-y: auto;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Show popup */
+#cart-popup.active {
+  display: block;
+}
+
+/* Cart header */
+#cart-popup h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* Cart item layout */
+#cart-popup .cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0;
+}
+
+/* Remove button */
+#cart-popup button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 3px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#cart-popup button:hover {
+  background-color: #e60000;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* buy now button of log in page */
