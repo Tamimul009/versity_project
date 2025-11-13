@@ -91,20 +91,26 @@
 
     <form id="loginForm" novalidate>
       <div>
-        <label for="userid">User ID</label>
+        <label for="userid">Email:</label>
         <div class="field">
-          <input id="userid" name="userid" type="text" inputmode="text" placeholder="your userid" required aria-required="true" />
+          <input id="userid" name="userid" type="text" inputmode="text" placeholder="your email:" required aria-required="true" />
         </div>
       </div>
 
       <div>
         <label for="password">Password</label>
         <div class="field">
-          <input id="password" name="password" type="password" placeholder="Enter your password" required aria-required="true" minlength="6" />
+          <input id="password" name="password" type="password" placeholder="Choose password" required aria-required="true" minlength="6" />
         </div>
         <div class="helper">At least 6 characters.</div>
       </div>
-
+            <div>
+        <label for="password">Your area name:</label>
+        <div class="field">
+          <input id="area" type="text" required aria-required="true" placeholder="e.g. khejurtake/pollibiddut"/>
+        </div>
+        <div class="helper">Your living area</div>
+      </div>
       <div>
         <label for="phone">Phone</label>
         <div class="field">
@@ -114,10 +120,8 @@
       </div>
       <div class="actions">
         <label class="remember"><input type="checkbox" id="remember" /> Remember me</label>
-        <button type="reset" class="btn">Sign in</button>
+        <button type="reset" class="btn">Sign Up</button>
       </div>
-      <div id="formMsg"></div>
-      <div class="meta">New here? <a href="../assets/signup.html"><button type="button" class="btn secondary" >Create account</button></a></div>
     </form>
   </main>
 </body>
