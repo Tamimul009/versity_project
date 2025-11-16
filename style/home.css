@@ -3,6 +3,62 @@ body{
     color: rgba(81, 5, 81,.7);
 }
 
+/* easy nav */
+/* Dropdown Container */
+.dropdown {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    display: inline-block;
+}
+
+/* Menu Button */
+.dropbtn {
+    /* background-color:#fff; */
+    color: aquamarine;
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* Dropdown Content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 99;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+/* Hover Effects */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #444;
+}
+
+/* ends here */
     h1{
         font-family:cursive;
         font-weight: 800;
@@ -123,12 +179,12 @@ body{
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #ff9900;
-  color: #fff;
+  background-color: #a400b3;
+  color: black;
   border: none;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   font-size: 22px;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
@@ -136,7 +192,7 @@ body{
   transition: 0.3s;
 }
 #cart-btn:hover {
-  background-color: #e68a00;
+  background-color: #22b10c;
   transform: scale(1.1);
 }
 
