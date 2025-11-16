@@ -49,16 +49,16 @@ section{
 .p1 {
     padding: 20px;
         border-radius: 10px;
-        background-color: rgba(175, 174, 174, 0.3);
-    color:rgba(233, 3, 3, 0.868);
+        background-color: rgba(175, 174, 174, 0.6);
+    color:rgba(116, 0, 0, 0.868);
     font-size:50px;
     align-items: center;
 }
 .p2{     
         padding: 20px;
         border-radius: 10px;
-        background-color: rgba(9, 9, 9, 0.3);
-        color:rgba(255, 255, 255, 0.868);
+        background-color: rgba(9, 9, 9, 0.5);
+        color:rgba(0, 253, 215, 0.744);
         font-size: 40px;
         font-weight: 700;
 }
@@ -66,10 +66,12 @@ a{
     text-decoration: none;
 }
 .btn{
-    background: #ff4d4d;
+    background: #fbc7c7;
       padding: 20px 35px;
       border: none;
       color: #fff;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: 700;
       font-size: 20px;
       border-radius: 5px;
       cursor: pointer;

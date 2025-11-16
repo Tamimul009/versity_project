@@ -5,6 +5,78 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Login — Cheese Craver</title>
   <style>
+/* ─────────── TOP-RIGHT DROPDOWN MENU ─────────── */
+.top-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.menu-btn {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  font-size: 22px;
+  color: #fefefe;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.menu-btn:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* Dropdown box */
+.menu-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+  background: rgba(11,18,32,0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 12px;
+  min-width: 160px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.45);
+  overflow: hidden;
+  animation: fadeIn 0.25s ease;
+}
+
+/* Links inside dropdown */
+.menu-dropdown a {
+  display: block;
+  padding: 12px 16px;
+  color: #e8edf3;
+  text-decoration: none;
+  font-size: 14.5px;
+  transition: 0.2s;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.menu-dropdown a:last-child {
+  border-bottom: none;
+}
+
+/* Hover effect */
+.menu-dropdown a:hover {
+  background: rgba(255,255,255,0.07);
+  color: var(--accent);
+}
+
+/* Show dropdown on hover */
+.top-menu:hover .menu-dropdown {
+  display: block;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+    /* end */
     :root{
       --bg:#0f1724;
       --card:#0b1220;
@@ -80,6 +152,16 @@
   </style>
 </head>
 <body>
+  <!-- Top-right Dropdown Menu -->
+<div class="top-menu">
+  <button class="menu-btn">☰</button>
+  <div class="menu-dropdown">
+    <a href="../index.html">🏠 Home</a>
+    <a href="../assets/menu.html">🍽️ Menu</a>
+    <a href="../assets/signup.html">📝 Signup</a>
+  </div>
+</div>
+<!-- end -->
   <main class="container" role="main">
     <div class="brand">
       <div class="logo">CC</div>
